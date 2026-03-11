@@ -15,3 +15,18 @@ This is the real transition from “click ops” to “cloud engineer”:
     predictable changes
     reviewable diff
 
+1) Follow instructions for adding terraform files to a folder.
+2) Add security .json file to the folder.
+3) From the command line, do the following:
+
+        terraform init
+        terraform validate
+        terraform plan -out tfplan
+        terraform apply tfplan
+
+        terraform output vm_url
+
+Find the URL and open it in your browser.
+
+
+
