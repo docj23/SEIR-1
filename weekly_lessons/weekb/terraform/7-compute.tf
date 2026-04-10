@@ -21,6 +21,12 @@ resource "google_compute_instance" "vm" {
     #!/bin/bash
     apt-get update -y
     apt-get install -y git
+    apt-get install -y git nginx
+
+    systemctl enable nginx
+    systemctl start nginx
+
+    echo "🔥 SEIR LAB VM is running" > /var/www/html/index.html
 
     cd /tmp
     git clone https://github.com/BalericaAI/SEIR-1.git
